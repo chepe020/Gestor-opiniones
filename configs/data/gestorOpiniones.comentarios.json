@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "67de68b735086d7853e4d786"
+  },
+  "titular": {
+    "$oid": "67de437c6ae38bcbe4c179a5"
+  },
+  "comentario": "Que grande es el profesor Mayen ",
+  "createdAt": {
+    "$date": "2025-03-22T07:37:27.234Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-22T07:40:08.423Z"
+  }
+}]

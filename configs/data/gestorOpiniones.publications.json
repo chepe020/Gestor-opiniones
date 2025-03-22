@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "67de658535086d7853e4d752"
+  },
+  "titular": {
+    "$oid": "67de437c6ae38bcbe4c179a5"
+  },
+  "titulo": "Clases",
+  "categoria": [
+    {
+      "$oid": "67de5d60932e0194baa729df"
+    }
+  ],
+  "texto": "Hola como estas",
+  "comentarios": [],
+  "state": true,
+  "createdAt": {
+    "$date": "2025-03-22T07:23:49.957Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-22T07:23:49.957Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67de660c35086d7853e4d75d"
+  },
+  "titular": {
+    "$oid": "67de437c6ae38bcbe4c179a5"
+  },
+  "titulo": "Clases",
+  "categoria": [
+    {
+      "$oid": "67de5a3e09ed295cdf9257ba"
+    }
+  ],
+  "texto": "Un exelente 0 ",
+  "comentarios": [
+    {
+      "$oid": "67de68b735086d7853e4d786"
+    },
+    {
+      "$oid": "67de697735086d7853e4d79b"
+    }
+  ],
+  "state": true,
+  "createdAt": {
+    "$date": "2025-03-22T07:26:04.344Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-22T07:40:39.687Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67de664e35086d7853e4d764"
+  },
+  "titular": {
+    "$oid": "67de437c6ae38bcbe4c179a5"
+  },
+  "titulo": "Clases",
+  "categoria": [
+    {
+      "$oid": "67de5a3e09ed295cdf9257ba"
+    }
+  ],
+  "texto": "Hola como estas",
+  "comentarios": [],
+  "state": false,
+  "createdAt": {
+    "$date": "2025-03-22T07:27:10.006Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-22T07:28:36.181Z"
+  }
+}]

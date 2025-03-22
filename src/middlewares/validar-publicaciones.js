@@ -1,13 +1,19 @@
-import User from "../users/user-model.js";
 import Publication from "../publication/publication-model.js";
 
-export const eliminarPublicacion = async(req, res, next) => {
+export const eliminarPublicacion = async (req, res, next) => {
     const { id } = req.params;
     const authenticatedUser = req.user.id;
 
     try {
         const publi = await Publication.findById(id);
-        
+
+        if (!publi) {
+            return res.status(404).json({
+                success: false,
+                msg: "Publicación no encontrada"
+            });
+        }
+
         if (publi.titular.toString() !== authenticatedUser.toString()) {
             return res.status(403).json({
                 success: false,
@@ -15,22 +21,30 @@ export const eliminarPublicacion = async(req, res, next) => {
             });
         }
 
-        next()
-
+        next();
     } catch (error) {
         res.status(500).json({
             success: false,
-            msg: "Error al eliminar la publicacion"
-        })
+            msg: "Error al eliminar la publicación",
+            error: error.message || error
+        });
     }
-}
+};
 
-export const editarPublicacion = async(req, res, next) => {
+export const editarPublicacion = async (req, res, next) => {
     const { id } = req.params;
     const authenticatedUser = req.user.id;
 
     try {
         const publi = await Publication.findById(id);
+
+        if (!publi) {
+            return res.status(404).json({
+                success: false,
+                msg: "Publicación no encontrada"
+            });
+        }
+
         if (publi.titular.toString() !== authenticatedUser.toString()) {
             return res.status(403).json({
                 success: false,
@@ -38,12 +52,12 @@ export const editarPublicacion = async(req, res, next) => {
             });
         }
 
-        next()
-
+        next();
     } catch (error) {
         res.status(500).json({
             success: false,
-            msg: "Error al editar la publicacion"
-        })
+            msg: "Error al editar la publicación",
+            error: error.message || error
+        });
     }
-}
+};

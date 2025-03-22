@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "9880c38b-710c-49ed-8316-ae1cd528b0c8",
+		"name": "Comentario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37560259"
+	},
+	"item": [
+		{
+			"name": "Añadir Comentario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2RlNDM3YzZhZTM4YmNiZTRjMTc5YTUiLCJpYXQiOjE3NDI2MjkwMjQsImV4cCI6MTc0MjYzOTgyNH0.cLNDd_5FN7DWt0Ke9EY3oS0Xpt2-v1qgODR0EQvk7wk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comentario\": \"Profesor Ceferino\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gestorOpiniones/v1/publications/comment/:id?=67de660c35086d7853e4d75d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorOpiniones",
+						"v1",
+						"publications",
+						"comment",
+						":id"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "67de660c35086d7853e4d75d"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67de660c35086d7853e4d75d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar comentario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2RlNDM3YzZhZTM4YmNiZTRjMTc5YTUiLCJpYXQiOjE3NDI2MjkwMjQsImV4cCI6MTc0MjYzOTgyNH0.cLNDd_5FN7DWt0Ke9EY3oS0Xpt2-v1qgODR0EQvk7wk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comentario\": \"Que grande es el profesor Mayen \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gestorOpiniones/v1/publications/comment/editar/:id?=67de68b735086d7853e4d786",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorOpiniones",
+						"v1",
+						"publications",
+						"comment",
+						"editar",
+						":id"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "67de68b735086d7853e4d786"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67de68b735086d7853e4d786"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar comentario",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2RlNDM3YzZhZTM4YmNiZTRjMTc5YTUiLCJpYXQiOjE3NDI2MjkwMjQsImV4cCI6MTc0MjYzOTgyNH0.cLNDd_5FN7DWt0Ke9EY3oS0Xpt2-v1qgODR0EQvk7wk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gestorOpiniones/v1/publications/comment/:id?=67de697735086d7853e4d79b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorOpiniones",
+						"v1",
+						"publications",
+						"comment",
+						":id"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "67de697735086d7853e4d79b"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67de697735086d7853e4d79b"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

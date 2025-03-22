@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "67de437c6ae38bcbe4c179a1"
+  },
+  "categoria": "Matematicas",
+  "state": true,
+  "createdAt": {
+    "$date": "2025-03-22T04:58:36.506Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-22T04:58:36.506Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67de5a3e09ed295cdf9257ba"
+  },
+  "categoria": "Idioma Español",
+  "state": true,
+  "createdAt": {
+    "$date": "2025-03-22T06:35:42.954Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-22T06:35:42.954Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67de5d60932e0194baa729df"
+  },
+  "categoria": "Taller",
+  "state": true,
+  "createdAt": {
+    "$date": "2025-03-22T06:49:04.580Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-22T06:50:42.364Z"
+  }
+}]

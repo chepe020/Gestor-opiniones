@@ -1,8 +1,7 @@
 import Publication from "../publication/publication-model.js";
 import Comentario from "./comentarios-model.js";
-import User from "../users/user-model.js";
 
-export const updateComent = async(req, res) => {
+export const updateComent = async (req, res) => {
     try {
         const { id } = req.params;
         const { comentario } = req.body;
@@ -16,17 +15,14 @@ export const updateComent = async(req, res) => {
             });
         }
 
-        const newComment = await Comentario.create({
+       const newComment = await Comentario.create({
             comentario,
             titular: authenticatedUser
-        });        
+        });
 
         publi.comentarios.push(newComment);
-
-        
         await publi.save();
 
-        
         const savedPubli = await Publication.findById(id)
             .populate({
                 path: "comentarios",
@@ -37,63 +33,63 @@ export const updateComent = async(req, res) => {
                 }
             })
             .populate("categoria", "categoria -_id")
-            .populate("titular", "username -_id")
+            .populate("titular", "username -_id");
 
         res.status(200).json({
             success: true,
             msg: "Comentario agregado",
             publi: savedPubli
-        })
-        
-        
+        });
+
     } catch (error) {
         res.status(500).json({
             success: false,
-            msg: "Error al subir el comentario"
-        })
+            msg: "Error al subir el comentario",
+            error: error.message || error
+        });
     }
-}
+};
 
-export const editarComentario = async(req, res) => {
+export const editarComentario = async (req, res) => {
     try {
         const { id } = req.params;
-        const { _id, comentario, ...data} = req.body;
-        
-        const comment = await Comentario.findByIdAndUpdate(id, data, {new: true})
-            .populate("titular", "username -_id")
+        const { comentario, ...data } = req.body;
+
+        const comment = await Comentario.findByIdAndUpdate(id, data, { new: true })
+            .populate("titular", "username -_id");
 
         comment.comentario = comentario;
-        await comment.save()
+        await comment.save();
 
         res.status(200).json({
             success: true,
             msg: "Comentario actualizado",
             comment
-        })
+        });
     } catch (error) {
         res.status(500).json({
             success: false,
             msg: "Error al actualizar el comentario",
             error: error.message || error
-        })
+        });
     }
-}
+};
 
-export const deleteComment = async(req, res) => {
+export const deleteComment = async (req, res) => {
     const { id } = req.params;
-    
+
     try {
         await Comentario.findByIdAndDelete(id);
 
         res.status(200).json({
             success: true,
-            msg: "Comentario eliminado con exito!"
-        })
+            msg: "Comentario eliminado con éxito"
+        });
     } catch (error) {
         res.status(500).json({
             success: false,
             msg: "Error al eliminar el comentario",
             error: error.message || error
-        })
+        });
     }
-}
+};

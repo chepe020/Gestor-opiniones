@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "2c54ea66-9496-4801-a18d-b74597a84758",
+		"name": "publication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37560259"
+	},
+	"item": [
+		{
+			"name": "agregar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2RlNDM3YzZhZTM4YmNiZTRjMTc5YTUiLCJpYXQiOjE3NDI2MjUxNTksImV4cCI6MTc0MjYzNTk1OX0.0GxajAVvTWlkSBx1OfI3F4jgsd3DXFvAr-pvEFMNOXA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Clases\",\r\n  \"categoria\": \"Idioma Español\",\r\n  \"texto\": \"Hola como estas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gestorOpiniones/v1/publications/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorOpiniones",
+						"v1",
+						"publications",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2RlNDM3YzZhZTM4YmNiZTRjMTc5YTUiLCJpYXQiOjE3NDI2MjUxNTksImV4cCI6MTc0MjYzNTk1OX0.0GxajAVvTWlkSBx1OfI3F4jgsd3DXFvAr-pvEFMNOXA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gestorOpiniones/v1/publications/:id?=67de664e35086d7853e4d764",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorOpiniones",
+						"v1",
+						"publications",
+						":id"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "67de664e35086d7853e4d764"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67de664e35086d7853e4d764"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2RlNDM3YzZhZTM4YmNiZTRjMTc5YTUiLCJpYXQiOjE3NDI2MjUxNTksImV4cCI6MTc0MjYzNTk1OX0.0GxajAVvTWlkSBx1OfI3F4jgsd3DXFvAr-pvEFMNOXA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Clases\",\r\n  \"categoria\": \"Idioma Español\",\r\n  \"texto\": \"Un exelente 0 \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gestorOpiniones/v1/publications/:id?=67de660c35086d7853e4d75d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorOpiniones",
+						"v1",
+						"publications",
+						":id"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "67de660c35086d7853e4d75d"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67de660c35086d7853e4d75d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gestorOpiniones/v1/publications/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorOpiniones",
+						"v1",
+						"publications",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

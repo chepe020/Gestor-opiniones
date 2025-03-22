@@ -1,5 +1,4 @@
 import { Router } from "express";
-import { check } from "express-validator";
 import { getUsers, updateUsers } from './user-controller.js'
 import { onlyOneStudent } from '../middlewares/validar-usuarios.js';
 import { validarJWT } from '../middlewares/validar-jwt.js';

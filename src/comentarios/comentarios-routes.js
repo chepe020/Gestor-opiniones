@@ -1,5 +1,4 @@
 import { Router } from 'express';
-import { check } from 'express-validator';
 import { updateComent, editarComentario, deleteComment } from '../comentarios/comentarios-controller.js'
 import { justEditAOneStudent } from '../middlewares/validar-usuarios.js';
 import { validarCampos } from '../middlewares/validar-campos.js';
